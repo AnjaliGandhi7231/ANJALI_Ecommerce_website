@@ -29,6 +29,9 @@ const ProductList = ({ cart, setCart, product }) => {
   return (
     <div className="unique-product-list-container">
       <h1 className="unique-product-list-title">Product List</h1>
+        <Link to="/cart">
+        <button className="unique-view-cart-button">View Cart</button>
+      </Link>
       <div className="unique-product-list">
         {product.map(item => (
           <div key={item._id} className="unique-product-card">
@@ -43,9 +46,7 @@ const ProductList = ({ cart, setCart, product }) => {
           </div>
         ))}
       </div>
-      <Link to="/cart">
-        <button className="unique-view-cart-button">View Cart</button>
-      </Link>
+  
       <ToastContainer />
     </div>
   );
